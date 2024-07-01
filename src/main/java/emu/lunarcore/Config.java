@@ -32,7 +32,7 @@ public class Config {
     @Getter
     public static class DatabaseInfo {
         public String uri = "mongodb://localhost:27017";
-        public String collection = "lunarcore";
+        public String collection = "starlight";
         public boolean useInternal = true;
     }
 
@@ -97,9 +97,9 @@ public class Config {
 
     @Getter
     public static class GameServerConfig extends ServerConfig {
-        public String id = "lunar_rail_test";
-        public String name = "Lunar Core";
-        public String description = "A LunarCore server";
+        public String id = "starlight_testserver";
+        public String name = "StarLight";
+        public String description = "StarLight Asia";
         public int kcpInterval = 40;
         public Integer kcpTimeout = 30;
 
@@ -127,9 +127,9 @@ public class Config {
         public boolean spendStamina = true;
         public int staminaRecoveryRate = 5 * 60;
         public int staminaReserveRecoveryRate = 18 * 60;
-        public int startTrailblazerLevel = 1; // Starting trailblazer level for new players
+        public int startTrailblazerLevel = 70; // Starting trailblazer level for new players
         public boolean autoUpgradeWorldLevel = true; // Automatically upgrades world level when the player reaches a certain TB level
-        public String language = "EN";
+        public String language = "CHS";
         public Set<String> defaultPermissions = Set.of("*");
         public int maxPlayers = -1;
         public ServerProfile serverFriendInfo = new ServerProfile();
@@ -155,11 +155,11 @@ public class Config {
     
     @Getter
     public static class ServerProfile {
-        public String name = "Server";
-        public String signature = "Type /help for a list of commands";
-        public int level = 1;
-        public int headIcon = 201001;
-        public int chatBubbleId = 0;
+        public String name = "StarLight Console";
+        public String signature = "Welcome to StarLight!Type /help for a list of commands.";
+        public int level = 70;
+        public int headIcon = 200107;
+        public int chatBubbleId = 221006;
         public List<ServerDisplayAvatar> displayAvatars = List.of(new ServerDisplayAvatar(1001, 1));
         
         @Getter
@@ -182,15 +182,19 @@ public class Config {
         public List<ItemParam> attachments;
         
         public WelcomeMail() {
-            this.title = "Welcome to a LunarCore server";
-            this.sender = "Server";
-            this.content = "Welcome to Lunar Core! Please take these items as a starter gift. For a list of commands, type /help in the server chat window. Check out our <a type=OpenURL1 href=https://discord.gg/cfPKJ6N5hw>Discord</a> and <a type=OpenURL1 href=https://github.com/Melledy/LunarCore>Github</a> for more information about the server.";
+            this.title = "Welcome to StarLight1";
+            this.sender = "Console";
+            this.content = "Welcome to StarLight! Please take these items as a starter gift. For a list of commands, type /help in the server chat window.Have fun in our server!";
             this.attachments = List.of(
-                new ItemParam(2, 1000000),
-                new ItemParam(101, 100),
-                new ItemParam(102, 100),
-                new ItemParam(1001, 1),
-                new ItemParam(1002, 1)
+                new ItemParam(2, 50000000),
+                new ItemParam(1, 500000),
+                new ItemParam(1310, 1),
+                new ItemParam(1314, 1),
+                new ItemParam(201, 100),
+                new ItemParam(11310, 6),
+                new ItemParam(11314, 6),
+                new ItemParam(23025, 5),
+                new ItemParam(23028, 5)
             );
         }
     }
